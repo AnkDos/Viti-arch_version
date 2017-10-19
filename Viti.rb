@@ -37,16 +37,16 @@ comm.each{
     #gr=["me","a"]
     co.each{ |x|
     if x=="upgrade"
-    system "apt-get upgrade"
+    system "pacman -Syy"
     end
     if x=="update"
-    system "apt-get update"
+    system "pacman -Su"
     end
 
      count=0
         if x=="install" || x=="Install"
             count= co.index(x)
-            system "apt-get install #{co[count+1]}"
+            system "pacman -S #{co[count+1]}"
 
         end
 
