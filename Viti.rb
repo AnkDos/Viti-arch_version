@@ -17,14 +17,14 @@ work=false
 comm.each{
     |x,y|
     if x.downcase.include? "www."
-    system "xdg-open https://#{x}"
+    system "firefox https://#{x}"
     puts "visit #{x}"
     work=true
     end
     }
     #puts work
     if work==false
-    system "xdg-open https://www.google.com/search?q='#{command}'"
+    system "firefox https://www.google.com/search?q='#{command}'"
     end
     end
    #---------------FOR WEB ---------------------------
